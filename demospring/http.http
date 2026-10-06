@@ -1,3 +1,43 @@
+### Registrar producto
+POST https://humble-space-computing-machine-q7pxjppw65xph46jp-8080.app.github.dev/producto/marca/1001/nuevo
+Content-Type: application/json
+
+{
+  "nombre":"Davis",
+  "descripcion": "Davis Yovannny Arapa Chua",
+	"precio":600,
+	"stock":3
+}
+
+### Ajustar stock
+POST https://humble-space-computing-machine-q7pxjppw65xph46jp-8080.app.github.dev/producto/stock/ajuste
+Content-Type: application/json
+
+{
+  "idProducto": 1013,
+  "stock": 3
+}
+
+### Consultar producto por id
+GET https://humble-space-computing-machine-q7pxjppw65xph46jp-8080.app.github.dev/producto/1013
+
+### Registrar pedido
+POST https://special-guacamole-x596qv4pxprr2qv7-8080.app.github.dev/pedido/nuevo
+Content-Type: application/json
+
+{
+ "items":[
+   {
+     "idProducto": 1013,
+     "cantidad": 6,
+     "precioUnitario":3000
+   }
+ ]
+}
+
+### =============================================================================================
+### =============================================================================================
+
 ### Registrar pedido
 POST https://studious-barnacle-g459w7pr6wxxhvj99-8080.app.github.dev/pedido/nuevo
 Content-Type: application/json
@@ -5,7 +45,7 @@ Content-Type: application/json
 {
  "items":[
    {
-     "idProducto": 1004,
+     "idProducto": 1013,
      "cantidad": 2,
      "precioUnitario":3000
    },
