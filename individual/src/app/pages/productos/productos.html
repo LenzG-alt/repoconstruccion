@@ -3,13 +3,15 @@
 
   <div class="catalog-header">
     <div>
-      <span class="eyebrow">DATABASE / INVENTORY_001</span>
-      <h1>Our Products<span>.</span></h1>
-      <p>Explora nuestra selección de suplementación deportiva.</p>
+      <span class="eyebrow">BASE DE DATOS / INVENTARIO_001</span>
+
+      <h1>Nuestros productos<span>.</span></h1>
+
+      <p>Encuentra el suplemento ideal para tus objetivos.</p>
     </div>
 
     <div class="total-box">
-      <span>TOTAL ITEMS</span>
+      <span>TOTAL DE PRODUCTOS</span>
       <strong>{{ productos.length }}</strong>
     </div>
   </div>
@@ -18,11 +20,12 @@
     <table>
       <thead>
         <tr>
-          <th>NO.</th>
-          <th>CODE</th>
-          <th>PRODUCT NAME</th>
-          <th>CATEGORY</th>
-          <th>PRICE</th>
+          <th>N.º</th>
+          <th>IMAGEN</th>
+          <th>CÓDIGO</th>
+          <th>PRODUCTO</th>
+          <th>CATEGORÍA</th>
+          <th>PRECIO</th>
           <th>STOCK</th>
         </tr>
       </thead>
@@ -36,12 +39,30 @@
             </span>
           </td>
 
+          <td>
+            <div class="product-image">
+              <img
+                *ngIf="producto.imagen; else sinImagen"
+                [src]="producto.imagen"
+                [alt]="'Envase de ' + producto.nombre"
+              />
+
+              <ng-template #sinImagen>
+                <span>NF</span>
+              </ng-template>
+            </div>
+          </td>
+
           <td class="code">{{ producto.codigo }}</td>
 
-          <td class="product-name">{{ producto.nombre }}</td>
+          <td class="product-name">
+            {{ producto.nombre }}
+          </td>
 
           <td>
-            <span class="category">{{ producto.categoria }}</span>
+            <span class="category">
+              {{ producto.categoria }}
+            </span>
           </td>
 
           <td class="price">
@@ -61,8 +82,8 @@
   </div>
 
   <div class="table-footer">
-    <span>END OF DATABASE</span>
-    <span>DATA UPDATED / 2026</span>
+    <span>FIN DEL CATÁLOGO</span>
+    <span>MOSTRANDO {{ productos.length }} PRODUCTOS</span>
   </div>
 
 </section>
