@@ -1,0 +1,31 @@
+
+<header class="navbar">
+  <a routerLink="/" class="brand">
+    <span class="brand-icon">N</span>
+    <span>NUTRIFORGE</span>
+  </a>
+
+  <nav class="nav-links">
+    <a routerLink="/" routerLinkActive="active"
+       [routerLinkActiveOptions]="{exact: true}">
+      Inicio
+    </a>
+
+    <a routerLink="/productos" routerLinkActive="active">
+      Productos
+    </a>
+  </nav>
+
+  <a routerLink="/productos" class="nav-button">
+    EXPLORE STORE ↗
+  </a>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer">
+  <span>NUTRIFORGE © 2026</span>
+  <span>BUILT FOR PERFORMANCE.</span>
+</footer>

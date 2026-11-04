@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --paper: #F8F8F6;
+  --white: #FFFFFF;
+  --black: #000000;
+  --pink: #FF5B8C;
+  --rose: #E63956;
+  --yellow: #F5E8B7;
+  --gray: #777777;
+
+  --border: 2px solid var(--black);
+  --shadow: 4px 4px 0px var(--black);
+
+  --font-main: 'Space Grotesk', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--paper);
+  color: var(--black);
+
+  background-image:
+    linear-gradient(#0000000a 1px, transparent 1px),
+    linear-gradient(90deg, #0000000a 1px, transparent 1px);
+
+  background-size: 24px 24px;
+}
+
+button, a {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}

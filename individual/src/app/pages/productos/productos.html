@@ -1,0 +1,68 @@
+
+<section class="catalog">
+
+  <div class="catalog-header">
+    <div>
+      <span class="eyebrow">DATABASE / INVENTORY_001</span>
+      <h1>Our Products<span>.</span></h1>
+      <p>Explora nuestra selección de suplementación deportiva.</p>
+    </div>
+
+    <div class="total-box">
+      <span>TOTAL ITEMS</span>
+      <strong>{{ productos.length }}</strong>
+    </div>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>NO.</th>
+          <th>CODE</th>
+          <th>PRODUCT NAME</th>
+          <th>CATEGORY</th>
+          <th>PRICE</th>
+          <th>STOCK</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let producto of productos; let i = index">
+
+          <td>
+            <span class="number">
+              {{ (i + 1).toString().padStart(2, '0') }}
+            </span>
+          </td>
+
+          <td class="code">{{ producto.codigo }}</td>
+
+          <td class="product-name">{{ producto.nombre }}</td>
+
+          <td>
+            <span class="category">{{ producto.categoria }}</span>
+          </td>
+
+          <td class="price">
+            S/ {{ producto.precio.toFixed(2) }}
+          </td>
+
+          <td>
+            <span class="stock"
+              [class.low-stock]="producto.stock < 10">
+              {{ producto.stock }} UN.
+            </span>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-footer">
+    <span>END OF DATABASE</span>
+    <span>DATA UPDATED / 2026</span>
+  </div>
+
+</section>
