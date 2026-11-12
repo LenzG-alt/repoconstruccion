@@ -1,0 +1,116 @@
+/* Contenedor principal */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: #f4f6f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h2 {
+  text-align: center;
+  color: #243b55;
+  margin-top: 25px;
+}
+
+/* Campos */
+.campo {
+  margin-bottom: 15px;
+}
+
+.campo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.campo input:not([type="radio"]),
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.campo textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.opciones {
+  display: flex;
+  gap: 20px;
+}
+
+.opciones label {
+  font-weight: normal;
+}
+
+.opciones input {
+  margin-right: 5px;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Hover */
+button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+/* Botón deshabilitado */
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+table {
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-size: 13px;
+  background-color: white;
+}
+
+th {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f4f8;
+}
+
+p {
+  text-align: center;
+  color: #666;
+}
